@@ -10,7 +10,7 @@ $term = getActiveTerm($conn);
     <nav class="d-flex align-items-center justify-content-between px-3 bg-dark text-white" style="height: 60px; box-shadow: 0 2px 4px rgba(0,0,0,0.5); border-bottom: 2px solid rgba(0,0,0,0.2);">
         <div class="d-flex align-items-center gap-1">
             <img class="d-inline-block" src="../assets/image/dd-logo.png" style="width:35px; height:35px;">
-            <h4 class="ps-2 d-inline-block fw-bolder text- m-0">Admin Portal</h4>
+            <h4 class="ps-2 d-inline-block fw-bolder text- m-0">DD Admin Portal</h4>
         </div>
         <!-- <h4 class="m-0"></h4> -->
         <div class="d-flex align-items-center gap-3">
