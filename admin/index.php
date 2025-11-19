@@ -4,6 +4,20 @@ $staff = getAllStaff($conn);
 $exam = getAllExams($conn);
 $student = getAllStudents($conn);
 $term = getActiveTerm($conn);
+
+// function to get current time greeting
+function getCurrentTime()
+{
+    $t = date("H");
+    if ($t < 12) {
+        echo "Good Morning,";
+    } elseif ($t < 17) {
+        echo "Good Afternoon,";
+    } else {
+        echo "Good Evening,";
+    };
+}
+
 ?>
 
 <div class="container-fluid p-0 m-0">
@@ -55,7 +69,10 @@ $term = getActiveTerm($conn);
                     <h5 class="m-0">Admin Dashboard Overview</h5>
                 </div>
                 <div class="d-flex flex-column text-white mb-3 p-4 text-start bg-primary rounded-3">
-                    <p class="m-0">Welcome back, <b><?= strtoupper($_SESSION["user"]["other_names"]); ?>!</b></p>
+                    <p class="m-0">
+                        <?= getCurrentTime(); ?>
+                        <b><?= strtoupper($_SESSION["user"]["other_names"]); ?>!</b>
+                    </p>
                     <p class="m-0">Here's an overview of your exam management system.</p>
                 </div>
                 <div class="row m-0 p-2">

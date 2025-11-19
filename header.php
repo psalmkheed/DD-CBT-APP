@@ -15,7 +15,7 @@
     <style>
         body {
 
-            background: url(assets/image/cbt-bg.jpg);
+            background: url(./assets/image/cbt-bg.jpg);
             background-size: cover;
             background-repeat: repeat-y;
             background-attachment: fixed;

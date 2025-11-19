@@ -54,6 +54,7 @@
                                 <label for="class" class="form-label text-seconary">Select Class</label>
                                 <select class="form-control" name="class">
                                     <option disabled selected>Select Class</option>
+                                    <option value="YEAR 5">YEAR 5</option>
                                     <option value="JSS 1">JSS 1</option>
                                     <option value="JSS 2">JSS 2</option>
                                     <option value="JSS 3">JSS 3</option>

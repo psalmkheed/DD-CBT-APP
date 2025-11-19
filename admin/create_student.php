@@ -44,6 +44,7 @@
                             <div class="form-floating mb-1 mt-1">
                                 <select class="form-control rounded-3" id="class" name="class" required>
                                     <option value="" disabled selected>Select Class</option>
+                                    <option value="YEAR 5">YEAR 5</option>
                                     <option value="JSS 1">JSS 1</option>
                                     <option value="JSS 2">JSS 2</option>
                                     <option value="JSS 3">JSS 3</option>

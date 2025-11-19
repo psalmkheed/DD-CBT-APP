@@ -14,7 +14,7 @@ function loginAuth($conn, $user_id, $pword){
     $sql= "SELECT * FROM users WHERE user_id= ? AND auth_code=?";
     $query= mysqli_prepare($conn, $sql);
     if(!$query){
-        die("Prepare Failed". mysqli_error());
+        die("Prepare Failed" . mysqli_error($conn));
     }
     else{
     mysqli_stmt_bind_param($query, 'ss', $user_id, $pword);

@@ -15,16 +15,25 @@ $password= filter_var($_POST["password"]);
         session_start();
         $_SESSION["user"]= $row_data;
         $role= $_SESSION["user"]['user_role'];
-        if($role=="student"){
-            $res= "student";
+
+            switch ($role) {
+                case 'student':
+                    $res = 'student';
+                    break;
+
+                case 'admin':
+                    $res = 'admin';
+                    break;
+
+                case 'staff':
+                    $res = 'staff';
+                    break;
+
+                default:
+                    "You're not permitted here";
+                    break;
             }
-            elseif($role=="admin"){
-                $res="admin";
-            }
-            else{
-                $res="staff"; 
         }
-    }
         else{
             $res= "Incorrect login credentials";
         }
@@ -32,4 +41,3 @@ $password= filter_var($_POST["password"]);
     }
 }
 echo $res;
-?>

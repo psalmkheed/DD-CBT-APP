@@ -26,6 +26,27 @@
             overflow-y: auto;
         }
 
+        form {
+            width: 75%;
+        }
+
+        .content_row {
+            padding-inline: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+            .sticky-card {
+                display: none;
+            }
+
+            form {
+                width: 100%;
+            }
+
+        }
+
+
+
         .question-card {
             background: #fefefe;
             border-radius: 10px;
@@ -63,10 +84,9 @@
         $query = mysqli_query($conn, $sql);
         $query_result = mysqli_fetch_assoc($query);
         if (mysqli_num_rows($query) > 0) {
-            if ($query_result["score"] > 0){
+            if ($query_result["score"] > 0) {
                 echo "<script>alert('You have already taken this Examination.'); window.location.href='../student/index.php';</script>";
-            }
-            else {
+            } else {
                 $to_start = time();
                 $start_time = date("Y-m-d H:i:s", $to_start);
                 mysqli_query($conn, "UPDATE results SET start_time= '$start_time' where exam_id='$eid' AND user_id='$user_id'");
@@ -104,9 +124,9 @@
 
         <!-- Main Content -->
         <div class="container-fluid py-3 px-2">
-            <div class="row g-4 px-5">
+            <div class="row g-1 content_row">
                 <!-- Left Pane: Questions -->
-                <div class="col-lg-8 col-md-7 col-sm-12">
+                <div class="col-lg-8 col-md-12 col-sm-12 question_body">
                     <h4 class="mb-4"><?= strtoupper($sub); ?></h4>
 
                     <?php
@@ -123,7 +143,7 @@
                             $res = mysqli_stmt_get_result($query);
                             $tq = mysqli_num_rows($res);
 
-                            echo "<form method='post' action='submit_exam.php?eid=$eid&sub=$sub&tq=$tq' id='examform' class='w-75'>";
+                            echo "<form method='post' action='submit_exam.php?eid=$eid&sub=$sub&tq=$tq' id='examform' class=''>";
                             while ($row = mysqli_fetch_assoc($res)) {
                                 echo "
                                 <div class='question-card'>

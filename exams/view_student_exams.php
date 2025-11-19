@@ -46,7 +46,7 @@ if ($query) {
                 <div class='flex flex-col gap-2'>
                     <div class='flex align-items-start justify-content-between'>
                         <p class='text-xl font-bold m-0'>" . $exams['subjects'] . "</p>
-                        <div class='bg-success px-2 text-xs py-1 rounded-full fw-medium d-flex align-items-center justify-content-center gap-1' style='font-size: 11px; color:#fff;'><img src='../assets/icon/clock-5.png' style='width:15px;'>COMPLETED
+                        <div class='bg-success px-2 text-xs py-1 rounded-full fw-medium d-flex align-items-center justify-content-center gap-0' style='font-size: 11px; color:#fff;'><img src='../assets/icon/check.svg' style='width:15px;'>COMPLETED
                         </div>
                     </div>
                     <div class='fs-6 font-medium'>Total Question: " . $exams['num_quest'] . "</div>
@@ -57,7 +57,7 @@ if ($query) {
                 </div>
                     <div class='mt-3'>
                         <button class='d-flex align-items-center justify-content-center gap-1 btn btn-success text-white fw-medium btn-sm w-full p-2 fs-6' title='Exam Taken' disabled>
-                        <img src='../assets/icon/play.png' width='20' />
+                        <img src='../assets/icon/badge-check.svg' width='20' />
                         Exam Taken
                         </button>
                     </div>
@@ -66,12 +66,12 @@ if ($query) {
             echo "
            <div class='p-3 cursor-pointer flex flex-col gap-2 fetch-card justify-content-between' style='transition: ease-in-out 0.3s;'>
            <div class='flex flex-col gap-2'>
-                <div class='flex align-items-center justify-content-between'> <p class='text-xl font-bold m-0'>" . $exams['subjects'] . "</p> <div class='bg-warning px-2 py-1 rounded-full fw-medium d-flex align-items-center justify-content-center gap-1' style='font-size: 11px; color:#fff;'><img src='../assets/icon/clock-5.png' style='width:15px;' />" . strtoupper($exams['status']) . "</div></div>
+                <div class='flex align-items-center justify-content-between'> <p class='text-xl font-bold m-0'>" . $exams['subjects'] . "</p> <div class='bg-warning px-2 py-1 rounded-full fw-medium d-flex align-items-center justify-content-center gap-1' style='font-size: 11px; color:#fff;'><img src='../assets/icon/clock-5.svg' style='width:15px;' />" . strtoupper($exams['status']) . "</div></div>
                 <div class='fs-6 font-medium'>Total Question: " . $exams['num_quest'] . "</div>
-                <div class='fs-6 font-medium'>Exam Type: " . $exams['exam_type'] . "</div>
+     
                 <div class='fs-6 font-medium d-flex align-items-center  gap-1'><img src='../assets/icon/timer.png' style='width:20px;' />" . $time . " Minutes</div>
                 </div>
-                <div class='mt-3'><a title='Take Exams' class='d-flex align-items-center justify-content-center gap-1 btn btn-warning text-white fw-medium btn-sm w-full p-2 fs-6' href='../exams/take_exam.php?eid=" . $exams['exam_id'] . "&s=$s&tq=$tq'><img src='../assets/icon/play.png' width='20' />Take Exam</a>
+                <div class='mt-3'><a title='Take Exams' class='d-flex align-items-center justify-content-center gap-1 btn btn-warning text-white fw-medium btn-sm w-full p-2 fs-6' href='../exams/take_exam.php?eid=" . $exams['exam_id'] . "&s=$s&tq=$tq'><img src='../assets/icon/play.svg' width='20' />Take Exam</a>
                 </div>
             </div>";
         }
