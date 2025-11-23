@@ -18,10 +18,8 @@
 
 table {
         border-collapse: collapse;
-        /* This can be collapsed in this method */
         border-spacing: 0;
         border: none;
-        /* Remove the main table border */
     }
 
     th,

@@ -61,7 +61,7 @@ if (!isset($_SESSION["user"]["user_id"])) {
             if (empty($_SESSION["exam_data"])) {
                 echo "<p class='text-danger fw-bold p-2'> No Records of examinations Found at this time.</p>";
             } else {
-                echo "<table class='table table-striped table-hover' id=iqTable'><thead class='align-middle'><tr><th class='bg-success text-white'>Subject</th><th class='bg-success text-white'>Class</th><th class='bg-success text-white'>Total</th><th class='bg-success text-white'>Exam Type</th><th class='bg-success text-white'>Date Created</th><th class='bg-success text-white'>Due Date</th><th class='bg-success text-white'>Status</th><th class='text-center bg-success text-white'>Action</th></tr></thead><tbody class='align-middle'>";
+                echo "<table class='table table-striped table-hover table-responsive' id=iqTable'><thead class='align-middle'><tr><th class='bg-success text-white'>Subject</th><th class='bg-success text-white'>Class</th><th class='bg-success text-white'>Total</th><th class='bg-success text-white'>Exam Type</th><th class='bg-success text-white'>Date Created</th><th class='bg-success text-white'>Due Date</th><th class='bg-success text-white'>Status</th><th class='text-center bg-success text-white'>Action</th></tr></thead><tbody class='align-middle'>";
                 if ($_SESSION["user"]["user_role"] == "admin") {
                     $role = $_SESSION["user"]["user_role"];
                     foreach ($_SESSION["exam_data"] as $getExams) {

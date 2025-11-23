@@ -44,9 +44,7 @@
             }
 
         }
-
-
-
+        
         .question-card {
             background: #fefefe;
             border-radius: 10px;

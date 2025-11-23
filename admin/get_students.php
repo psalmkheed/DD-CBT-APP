@@ -4,7 +4,7 @@
             <div class="px-3 py-2 text-white mb-3 rounded-3" style="background: rgba(0, 123, 255, 0.8);">
                 <h5 class="m-0">Student Records</h5>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover table-responsive">
                 <thead class="align-middle">
                     <tr>
                         <th class="bg-success text-white">Names</th>

@@ -14,7 +14,6 @@
     <script src="assets/js/bootstrap.bundle.js"></script>
     <style>
         body {
-
             background: url(./assets/image/cbt-bg.jpg);
             background-size: cover;
             background-repeat: repeat-y;
@@ -22,7 +21,6 @@
             padding: 0;
             overflow-x: hidden;
         }
-
 
         ::-webkit-scrollbar {
             width: 8px;
