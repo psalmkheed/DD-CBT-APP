@@ -3,10 +3,12 @@ include("db.php");
 if(!empty($_POST["login"])){
 $username= filter_var($_POST["username"]);
 $password= filter_var($_POST["password"]);
-    if(empty($username) || empty($password)){
-        $res="All fields are required";
-    }
-    else{
+    $res = "";
+    if (empty($username)) {
+        $res = "Please input your username";
+    } elseif (empty($password)) {
+        $res = "Enter a valid password";
+    } else {
     $stmt= "SELECT * FROM users WHERE user_id='$username' && auth_code='$password'";
     $query= mysqli_query($conn, $stmt);
     $num= mysqli_num_rows($query);

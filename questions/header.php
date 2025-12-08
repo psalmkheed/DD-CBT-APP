@@ -9,6 +9,7 @@
     <link rel="icon" type="image" href="../assets/image/dd-logo.png" />
 <!-- Icon Font Stylesheet -->
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/css/output.css" rel="stylesheet" />
 <script src="../assets/js/bootstrap.bundle.js"></script>
 <script src="../assets/js/jquery.js"></script>
 <style>

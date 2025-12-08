@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        DD CBT PORTAL - LOGIN
+        DD CBT Portal - Login
     </title>
     <link rel="icon" type="image" href="assets/image/dd-logo.png" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -45,7 +45,7 @@
         }
 
         .form-control:focus {
-            box-shadow: 0 0 0 .05rem rgba(41, 253, 13, 0.75) !important;
+            box-shadow: 0 0 5px .05rem rgba(41, 253, 13, 0.75) !important;
             border: #00c950 !important;
 
         }
@@ -82,7 +82,8 @@
 
         #main {
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 50, 0, 0.95);
+            background-blend-mode: multiply;
             margin-top: 0;
             width: 100vw;
         }

@@ -18,18 +18,23 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="icon" type="image" href="../assets/image/dd-logo.png" />
      <title>
-         DD-CBT APP
+         DD Admin Panel
      </title>
 
      <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
      <link href="../assets/css/output.css" rel="stylesheet" />
      <script src="../assets/js/bootstrap.bundle.js"></script>
      <script src="../assets/js/jquery.js"></script>
+     <link rel="stylesheet" href="../assets/css/all.min.css">
+
      <style>
          body {
              height: 100vh;
              overflow-X: hidden;
              overflow-Y: hidden;
+             font-size: 12px;
+             background: #f1f1f1;
+             color: #333333;
          }
 
          * {
@@ -69,19 +74,28 @@
          .sidebar {
              margin: 0;
              padding: 0;
-             height: 100vh;
          }
 
          .sidebar li {
-             display: block;
-             /* margin-top: 10px; */
              padding-block: 8px;
              display: flex;
              gap: 12px;
              align-items: center;
              padding-inline: <?php echo (isset($_SESSION['user']['user_role']) && $_SESSION['user']['user_role'] == 'Admin') ? '10px' : '15px'; ?>;
-             color: #999;
              cursor: pointer;
+             font-size: 12px;
+             transition: ease-in-out 0.2s;
+         }
+
+         .sidebar li:not(:last-child) {
+             margin-bottom: 8px;
+         }
+
+         .drop-down-chevron {
+             width: 18px;
+             height: 18px;
+             object-fit: cover;
+             filter: invert(50%) sepia(20%) saturate(500%) hue-rotate(100deg) brightness(90%) contrast(85%);
          }
 
          .main-content {
@@ -97,30 +111,62 @@
              color: #00c950 !important;
          }
 
-         .sidebar .active {
-             background-color: #00c95030;
-             border-radius: 50px;
-             color: #fff !important;
-             font-weight: medium;
-             /* #208A59 */
+         .sidebar li.active {
+             border-top-right-radius: 50px;
+             border-bottom-right-radius: 50px;
+             transition: ease-in-out 0.2s;
          }
+
+         /* sidebar list colors */
+         .sidebar li.active:nth-child(1) {
+             background-color: #00c95030;
+             color: var(--color-green-500);
+         }
+
+         .sidebar li.active:nth-child(2) {
+             background-color: var(--color-sky-100);
+             color: var(--color-sky-500);
+         }
+
+         .sidebar li.active:nth-child(3) {
+             background-color: var(--color-orange-100);
+             color: var(--color-orange-500);
+         }
+
+         .sidebar li.active:nth-child(4) {
+             background-color: var(--color-purple-100);
+             color: var(--color-purple-500);
+         }
+
+         .sidebar li.active:nth-child(5) {
+             background-color: var(--color-yellow-100);
+             color: var(--color-yellow-500);
+         }
+
+         .sidebar li.active:nth-child(6) {
+             background-color: var(--color-cyan-100);
+             color: var(--color-cyan-500);
+         }
+
+         .sidebar li.active:nth-child(7) {
+             background-color: var(--color-green-100);
+             color: var(--color-green-500);
+         }
+
+         .sidebar li.active:nth-child(8) {
+             background-color: var(--color-red-100);
+             color: var(--color-red-500);
+         }
+
+         .sidebar li.active:nth-child(9) {
+             background-color: var(--color-blue-100);
+             color: var(--color-blue-500);
+         }
+
 
          .sidebar li:hover {
-             background-color: #00c95030;
-             border-radius: 50px;
-             color: #fff !important;
-             font-weight: medium;
-         }
-
-
-         .sidebar .active i {
-             color: #fff !important;
-         }
-
-         .sidebar li i,
-         i {
-             color: #000;
-             font-size: 16px !important;
+             border-top-right-radius: 50px;
+             border-bottom-right-radius: 50px;
          }
 
          #profile-btn {
@@ -269,8 +315,8 @@
                  overflow-x: hidden;
                  font-size: 1.5rem;
              }
-             .sidebar {
 
+             .sidebar {
                  width: 100%;
                  height: max-content;
                  font-size: 1.5rem;
